@@ -9,6 +9,7 @@
     "@mdi/js": "^7.4.47",
     "@mdi/react": "^1.6.1",
     "@mui/icons-material": "^5.15.16",
+    "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.15.16",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

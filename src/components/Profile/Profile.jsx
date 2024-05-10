@@ -1,6 +1,6 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
-
+import { CustomTimeline } from "../Timeline/Timeline";
 import Icon from "@mdi/react";
 import { mdiDownload } from "@mdi/js";
 import profileImage from "../../assets/images/resume.JPG";
@@ -31,7 +31,9 @@ const Profile = () => {
         <ProfileImage src={profileImage} alt="profile" />
       </ProfileImageWrapper>
       <br />
-      <ProfileInfo>Insert timeline</ProfileInfo>
+      <ProfileInfo>
+        <CustomTimeline />
+      </ProfileInfo>
       <Button>
         Download CV <Icon path={mdiDownload} size={1} />
       </Button>

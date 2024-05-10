@@ -1,3 +1,7 @@
+.root {
+  --main-yelllow-color: #ffc500;
+}
+
 * {
   margin: 0;
 }
@@ -8,6 +12,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* overflow: hidden; */
+  background: url("../src/assets/images/istockphoto-1060912842-1024x1024.jpg");
 }
 
 code {
