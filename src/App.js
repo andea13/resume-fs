@@ -1,7 +1,9 @@
-import { Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import Profile from "./components/Profile/Profile";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+
+import { StyledContainer } from "./App.styled";
 
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { Suspense, lazy } from "react";
@@ -11,13 +13,31 @@ const ResumePage = lazy(() => import("./pages/ResumePage/ResumePage"));
 
 function App() {
   return (
-    <Container>
+    <StyledContainer>
       <Grid container spacing={7}>
-        <Grid item xs={12} sm={12} md={4}>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={4}
+          sx={{
+            // backgroundColor: "green",
+            paddingBottom: 5,
+            paddingRight: 5,
+            paddingTop: 5,
+          }}
+        >
           <Profile />
         </Grid>
 
-        <Grid item xs={false} md={8} style={{ backgroundColor: "yellow" }}>
+        <Grid
+          item
+          xs={false}
+          md={8}
+          style={{
+            backgroundColor: "yellow",
+          }}
+        >
           <Header />
           <Suspense>
             <BrowserRouter basename="/resume-fs">
@@ -31,7 +51,7 @@ function App() {
           <Footer />
         </Grid>
       </Grid>
-    </Container>
+    </StyledContainer>
   );
 }
 export default App;

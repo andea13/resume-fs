@@ -31,7 +31,7 @@ export const ProfileImageWrapper = styled.figure`
 
 export const ProfileImage = styled.img`
   width: 100%;
-  border-radius: 6px 6px 0 0;
+  border-radius: 3px 3px 3px 3px;
   padding: 0;
   margin-top: -10px;
   -webkit-clip-path: polygon(0 9%, 100% 0, 100% 94%, 0 100%);
@@ -41,7 +41,9 @@ export const ProfileImage = styled.img`
 export const ProfileInfo = styled.div`
   top: 0;
   left: 0;
-  margin: -65px 10px 30px;
+  margin-top: -65px;
+  margin-left: 10px;
+  margin-right: 10px;
 `;
 
 export const ProfileName = styled.h1`

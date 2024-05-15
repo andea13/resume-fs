@@ -1,11 +1,10 @@
 import * as React from "react";
 import { nanoid } from "nanoid";
-import Button from "@mui/material/Button";
+import CustomButton from "../Button/Button";
 import CustomTimeline, { CustomTimelineSeparator } from "../Timeline/Timeline";
 import TimelineContent from "@mui/lab/TimelineContent";
 
-import Icon from "@mdi/react";
-import { mdiDownload } from "@mdi/js";
+import GetAppIcon from "@mui/icons-material/GetApp";
 import profileImage from "../../assets/images/resume.JPG";
 import resumeData from "../../utils/resumeData";
 
@@ -79,9 +78,7 @@ const Profile = () => {
           ))}
         </CustomTimeline>
       </ProfileInfo>
-      <Button>
-        Download CV <Icon path={mdiDownload} size={1} />
-      </Button>
+      <CustomButton text={" Download CV"} icon={<GetAppIcon />}></CustomButton>
     </ProfileWrapper>
   );
 };
