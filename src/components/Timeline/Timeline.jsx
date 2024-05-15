@@ -6,20 +6,36 @@ import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
-import Icon from "@mdi/react";
-import { mdiBriefcase } from "@mdi/js";
 
-const CustomTimeline = ({ title, children }) => {
+const CustomTimeline = ({ title, children, icon }) => {
   return (
     <Timeline>
       {/* header item */}
-      <TimelineItem sx={{ minHeight: "0px" }}>
+      <TimelineItem
+        sx={{
+          minHeight: "0px",
+          "&::before": {
+            display: "none",
+          },
+        }}
+      >
         <TimelineSeparator sx={{ minHeight: "30px" }}>
-          <TimelineDot variant="outlined" sx={{ backgroundColor: "#ffc500" }}>
-            <Icon path={mdiBriefcase} size={1} color="#000" />
+          <TimelineDot
+            variant="outlined"
+            sx={{
+              backgroundColor: "#ffc500",
+              borderStyle: "none",
+              marginLeft: "-10px",
+            }}
+          >
+            {icon}
           </TimelineDot>
           <TimelineConnector
-            sx={{ minHeight: "25px", backgroundColor: "#eee" }}
+            sx={{
+              minHeight: "25px",
+              backgroundColor: "#eee",
+              marginLeft: "-10px",
+            }}
           />
         </TimelineSeparator>
         <TimelineContent>

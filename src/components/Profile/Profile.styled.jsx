@@ -41,3 +41,18 @@ export const ProfileTitle = styled.h2`
   font-size: 13 px;
   color: #777;
 `;
+
+export const CustomTimelineTitle = styled.span`
+  color: #333;
+  font-size: 16px;
+`;
+
+export const CustomTimelineText = styled.span`
+  color: #333;
+  font-size: 16px;
+`;
+
+export const CustomTimelineLink = styled.a`
+  color: #333;
+  font-size: 16px;
+`;

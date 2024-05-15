@@ -1,1 +1,27 @@
+.MuiTimelineItem-missingOppositeContent:before {
+  content: none;
+}
 
+/* .MuiTimelineDot-root-outlinedGrey {
+  border-style: none;
+}
+
+.MuiTimelineDot-outlinedGrey {
+  border-style: none;
+}
+
+span.MuiTimelineDot-outlined {
+  border-style: none;
+}
+
+.MuiTimelineDot-root {
+  border-style: none;
+}  */
+
+.MuiTimelineDot-outlinedGrey {
+  border-style: none;
+}
+
+/* .MuiTimelineDot-root.MuiTimelineDot-outlinedGrey {
+  border-style: none;
+} */
