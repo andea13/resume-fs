@@ -1,47 +1,31 @@
 import * as React from "react";
-import { Typography } from "@mui/material";
 import Timeline from "@mui/lab/Timeline";
-import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
-import TimelineDot from "@mui/lab/TimelineDot";
+
+import {
+  StyledSeparator,
+  StyledTimelineItem,
+  StyledTimelineDot,
+  StyledTimelineConnector,
+  StyledTimelineTypography,
+  StyledCustomSeparatorDot,
+  StyledCustomSeparatorConnector,
+} from "./Timeline.styled";
 
 const CustomTimeline = ({ title, children, icon }) => {
   return (
     <Timeline>
       {/* header item */}
-      <TimelineItem
-        sx={{
-          minHeight: "0px",
-          "&::before": {
-            display: "none",
-          },
-        }}
-      >
-        <TimelineSeparator sx={{ minHeight: "30px" }}>
-          <TimelineDot
-            variant="outlined"
-            sx={{
-              backgroundColor: "#ffc500",
-              borderStyle: "none",
-              marginLeft: "-10px",
-            }}
-          >
-            {icon}
-          </TimelineDot>
-          <TimelineConnector
-            sx={{
-              minHeight: "25px",
-              backgroundColor: "#eee",
-              marginLeft: "-10px",
-            }}
-          />
-        </TimelineSeparator>
+      <StyledTimelineItem>
+        <StyledSeparator>
+          <StyledTimelineDot variant="outlined">{icon}</StyledTimelineDot>
+          <StyledTimelineConnector />
+        </StyledSeparator>
         <TimelineContent>
-          <Typography sx={{ padding: "10px" }}>{title}</Typography>
+          <StyledTimelineTypography>{title}</StyledTimelineTypography>
         </TimelineContent>
-      </TimelineItem>
+      </StyledTimelineItem>
       {children}
     </Timeline>
   );
@@ -50,31 +34,10 @@ const CustomTimeline = ({ title, children, icon }) => {
 export const CustomTimelineSeparator = () => {
   return (
     <TimelineSeparator>
-      <TimelineDot sx={{ backgroundColor: "#fff", borderColor: "#ffc500" }} />
-      <TimelineConnector sx={{ minHeight: "25px", backgroundColor: "#eee" }} />
+      <StyledCustomSeparatorDot />
+      <StyledCustomSeparatorConnector />
     </TimelineSeparator>
   );
 };
 
 export default CustomTimeline;
-//       <TimelineItem>
-
-//         <TimelineContent>
-//           <Typography sx={{ paddingLeft: "20px" }}>{title}</Typography>
-//         </TimelineContent>
-//       </TimelineItem>
-
-//       <TimelineItem>
-//         <TimelineSeparator>
-//           <TimelineDot
-//             variant="outlined"
-//             sx={{ backgroundColor: "#fff", borderColor: "#ffc500" }}
-//           />
-//         </TimelineSeparator>
-//         <TimelineContent>
-//           <Typography sx={{ paddingLeft: "20px" }}>Sleep</Typography>
-//         </TimelineContent>
-//       </TimelineItem>
-//     </Timeline>
-//   );
-// };

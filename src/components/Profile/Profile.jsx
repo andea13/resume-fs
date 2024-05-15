@@ -2,7 +2,6 @@ import * as React from "react";
 import { nanoid } from "nanoid";
 import Button from "@mui/material/Button";
 import CustomTimeline, { CustomTimelineSeparator } from "../Timeline/Timeline";
-import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineContent from "@mui/lab/TimelineContent";
 
 import Icon from "@mdi/react";
@@ -21,42 +20,36 @@ import {
   CustomTimelineTitle,
   CustomTimelineText,
   CustomTimelineLink,
-} from "./Profile.styled";
+  StyledCustomTimelineItem,
+} from "./Profile.styled.jsx";
 import { Typography } from "@mui/material";
 import { PersonOutlineOutlined } from "@mui/icons-material";
 
 const CustomTimelineItem = ({ title, text, link }) => (
-  <TimelineItem
-    sx={{
-      minHeight: "0px",
-      "&::before": {
-        display: "none",
-      },
-    }}
-  >
+  <StyledCustomTimelineItem>
     <CustomTimelineSeparator />
     <TimelineContent>
       {link ? (
-        <Typography sx={{ padding: "10px" }}>
+        <>
           <CustomTimelineTitle>{title}</CustomTimelineTitle> :{" "}
           <CustomTimelineLink href={link} target="_blank" rel="noreferrer">
             {text}
           </CustomTimelineLink>
-        </Typography>
+        </>
       ) : (
-        <Typography sx={{ padding: "10px" }}>
+        <>
           <CustomTimelineTitle>{title}</CustomTimelineTitle> :{" "}
           <CustomTimelineText>{text}</CustomTimelineText>
-        </Typography>
+        </>
       )}
     </TimelineContent>
-  </TimelineItem>
+  </StyledCustomTimelineItem>
 );
 
 const Profile = () => {
   const { name, title, email, age } = resumeData;
   return (
-    <ProfileWrapper>
+    <ProfileWrapper className="container_shadow">
       <ProfileIntro>
         <ProfileName>
           <Typography>{name}</Typography>

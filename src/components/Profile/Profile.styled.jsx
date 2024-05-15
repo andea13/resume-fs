@@ -1,4 +1,14 @@
 import styled from "@emotion/styled";
+import { TimelineItem } from "@mui/lab";
+
+export const StyledCustomTimelineItem = styled(TimelineItem)`
+  &.MuiTimelineItem-missingOppositeContent {
+    min-height: 50px;
+  }
+  &.MuiTimelineItem-missingOppositeContent:before {
+    content: none;
+  }
+`;
 
 export const ProfileWrapper = styled.div`
   width: 100%;
@@ -6,6 +16,10 @@ export const ProfileWrapper = styled.div`
   display: inline-block;
   background-color: #fff;
   border-radius: 6px;
+
+  box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.13);
 `;
 export const ProfileIntro = styled.div`
   padding: 0;
@@ -25,7 +39,9 @@ export const ProfileImage = styled.img`
 `;
 
 export const ProfileInfo = styled.div`
-  padding: 0;
+  top: 0;
+  left: 0;
+  margin: -65px 10px 30px;
 `;
 
 export const ProfileName = styled.h1`
@@ -43,16 +59,18 @@ export const ProfileTitle = styled.h2`
 `;
 
 export const CustomTimelineTitle = styled.span`
-  color: #333;
-  font-size: 16px;
+  color: #000;
+  font-size: 15px;
 `;
 
 export const CustomTimelineText = styled.span`
-  color: #333;
-  font-size: 16px;
+  color: #787878;
+  font-size: 14px;
+  font-weight: 400;
 `;
 
 export const CustomTimelineLink = styled.a`
-  color: #333;
-  font-size: 16px;
+  color: #787878;
+  font-size: 14px;
+  text-decoration: none;
 `;
