@@ -1,4 +1,3 @@
-import { Grid } from "@mui/material";
 import Profile from "./components/Profile/Profile";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -30,13 +29,12 @@ const theme = createTheme({
 });
 
 function App() {
-  const matchesSmall = useMediaQuery(theme.breakpoints.up("sm"));
   const matchesMedium = useMediaQuery(theme.breakpoints.up("md"));
 
   return (
     <StyledContainer>
       <ThemeProvider theme={theme}>
-        <GridContainerStyled container spacing={matchesMedium ? 7 : 2}>
+        <GridContainerStyled container spacing={matchesMedium ? 3 : 0}>
           <GridFirstItemStyled item xs={12} sm={12} md={4}>
             <Profile />
           </GridFirstItemStyled>
