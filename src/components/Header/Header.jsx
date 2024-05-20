@@ -11,9 +11,8 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 
-import { HomeIconStyled } from "./Header.styled";
+import { HomeIconStyled, HeaderStyled, HeaderBoxStyled } from "./Header.styled";
 
 const pages = ["Resume", "Portfolio", "Blog", "Contact"];
 const socials = ["LinkedIn", "GitHub", "WhatsApp"];
@@ -38,16 +37,18 @@ const Header = () => {
   };
 
   return (
-    <AppBar position="static">
+    <HeaderStyled position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box>
-            <HomeIconStyled
-            // sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
-            />
-          </Box>
+          <HeaderBoxStyled>{/* <HomeIconStyled /> */}</HeaderBoxStyled>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+              justifyContent: { xs: "flexEnd", md: "none" },
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -83,7 +84,6 @@ const Header = () => {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -100,7 +100,7 @@ const Header = () => {
               textDecoration: "none",
             }}
           >
-            LOGO
+            <HomeIconStyled />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
@@ -115,7 +115,7 @@ const Header = () => {
           </Box>
         </Toolbar>
       </Container>
-    </AppBar>
+    </HeaderStyled>
   );
 };
 
