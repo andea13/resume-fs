@@ -9,15 +9,24 @@ display: { xs: none, md: flex },
 mr: 1`;
 
 export const HeaderBoxStyled = styled(Box)`
-    display: { xs: flex, md: none };
-    flex-grow: 1;
-    justify-content: { xs: flexEnd, md: none };
-    `;
+  @media (max-width: 900px) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  // display: flex:
+  // flex-grow: 1;
+  // justify-content: { xs: flexEnd, md: none };
+`;
 
 export const HeaderStyled = styled(AppBar)`
   background-color: #ffc500;
   color: #000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  @media (max-width: 600px) {
+    padding: 0;
+  }
 `;
 
 export const ButtonStyled = styled(Button)`
