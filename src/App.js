@@ -12,6 +12,7 @@ import {
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { Suspense, lazy } from "react";
 
+const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const PortfolioPage = lazy(() => import("./pages/PortfolioPage/PortfolioPage"));
 const ResumePage = lazy(() => import("./pages/ResumePage/ResumePage"));
 
@@ -42,12 +43,11 @@ function App() {
           <GridSecondItemStyled item xs={12} sm={12} md={8}>
             <Header />
             <Suspense>
-              <BrowserRouter basename="/resume-fs">
-                <Routes>
-                  <Route path="/" element={<ResumePage />} />
-                  <Route path="/portfolio" element={<PortfolioPage />} />
-                </Routes>
-              </BrowserRouter>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/resume" element={<ResumePage />} />
+                <Route path="/portfolio" element={<PortfolioPage />} />
+              </Routes>
             </Suspense>
 
             <Footer />

@@ -12,17 +12,27 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-// import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { nanoid } from "nanoid";
-import Link from "@mui/material/Link";
 
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
-import { HomeIconStyled, HeaderStyled, HeaderBoxStyled } from "./Header.styled";
+import {
+  HomeIconStyled,
+  HeaderStyled,
+  HeaderBoxStyled,
+  MenuIconStyled,
+  ToolbarStyled,
+  TypographyStyled,
+  HeaderNavBoxStyled,
+  HeaderSocialBoxStyled,
+  HeaderSocialLinkStyled,
+  StyledNavLink,
+} from "./Header.styled";
 
-const pages = ["Resume", "Portfolio", "Blog", "Contact"];
+const pages = ["Resume", "Portfolio"];
 
 const Header = ({ title, text, link }) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -46,7 +56,7 @@ const Header = ({ title, text, link }) => {
   return (
     <HeaderStyled position="static">
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <ToolbarStyled disableGutters>
           {/* <HeaderBoxStyled></HeaderBoxStyled> */}
           <HeaderBoxStyled
             sx={
@@ -57,22 +67,12 @@ const Header = ({ title, text, link }) => {
               }
             }
           >
-            <HomeIconStyled />
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-              {Object.keys(resumeData.socials).map((key) => (
-                <Link
-                  key={nanoid()}
-                  title={key}
-                  text={resumeData.socials[key].text}
-                  link={resumeData.socials[key].link}
-                  target="_blank"
-                  color="inherit"
-                >
-                  {resumeData.socials[key].icon}
-                </Link>
-              ))}
-            </Box>
-            <IconButton
+            <StyledNavLink index to="/">
+              {" "}
+              <HomeIconStyled />
+            </StyledNavLink>
+
+            <MenuIconStyled
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
@@ -81,7 +81,7 @@ const Header = ({ title, text, link }) => {
               color="inherit"
             >
               <MenuIcon />
-            </IconButton>
+            </MenuIconStyled>
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -107,36 +107,44 @@ const Header = ({ title, text, link }) => {
               ))}
             </Menu>
           </HeaderBoxStyled>
-          <Typography
+          <TypographyStyled
             variant="h5"
             noWrap
             component="a"
             href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
+            // sx={{
+            //   mr: 2,
+            //   display: { xs: "flex", md: "none" },
+            //   flexGrow: 1,
+            //   fontFamily: "monospace",
+            //   fontWeight: 700,
+            //   letterSpacing: ".3rem",
+            //   color: "inherit",
+            //   textDecoration: "none",
+            // }}
           >
             {/* <HomeIconStyled /> */}
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+          </TypographyStyled>
+          <HeaderNavBoxStyled>
+            {/* <StyledNavLink to="/">Home</StyledNavLink> */}
+            <StyledNavLink to="/resume">Resume</StyledNavLink>
+            <StyledNavLink to="/portfolio">Portfolio</StyledNavLink>
+          </HeaderNavBoxStyled>
+          <HeaderSocialBoxStyled sx={{ display: "flex", alignItems: "center" }}>
+            {Object.keys(resumeData.socials).map((key) => (
+              <HeaderSocialLinkStyled
+                key={nanoid()}
+                title={key}
+                text={resumeData.socials[key].text}
+                href={resumeData.socials[key].link}
+                target="_blank"
+                color="inherit"
               >
-                {page}
-              </Button>
+                {resumeData.socials[key].icon}
+              </HeaderSocialLinkStyled>
             ))}
-          </Box>
-        </Toolbar>
+          </HeaderSocialBoxStyled>
+        </ToolbarStyled>
       </Container>
     </HeaderStyled>
   );

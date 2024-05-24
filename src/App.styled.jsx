@@ -67,6 +67,10 @@ export const GridSecondItemStyled = styled(Grid)(({ theme }) => ({
   WebkitBoxShadow: "0px 2px 92px 0px rgba(0, 0, 0, 0.13)",
   MozBoxShadow: "0px 2px 92px 0px rgba(0, 0, 0, 0.13)",
 
+  "@media (min-width: 900px)": {
+    paddingLeft: "24px",
+  },
+
   // backgroundColor: "yellow",
   // padding: "40px",
 }));
