@@ -2,6 +2,7 @@ import Profile from "./components/Profile/Profile";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Grid } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import {
   StyledContainer,
@@ -39,18 +40,24 @@ function App() {
           <GridFirstItemStyled item xs={12} sm={12} md={4}>
             <Profile />
           </GridFirstItemStyled>
-
           <GridSecondItemStyled item xs={12} sm={12} md={8}>
-            <Header />
-            <Suspense>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/resume" element={<ResumePage />} />
-                <Route path="/portfolio" element={<PortfolioPage />} />
-              </Routes>
-            </Suspense>
-
-            <Footer />
+            <Header style={{ marginBottom: "30px" }} />
+            <Grid container direction="column">
+              <Grid item>
+                <div>
+                  <Suspense>
+                    <Routes>
+                      <Route path="/" element={<HomePage />} />
+                      <Route path="/resume" element={<ResumePage />} />
+                      <Route path="/portfolio" element={<PortfolioPage />} />
+                    </Routes>
+                  </Suspense>
+                </div>
+              </Grid>
+              <Grid item>
+                <Footer />
+              </Grid>
+            </Grid>
           </GridSecondItemStyled>
         </GridContainerStyled>
       </ThemeProvider>

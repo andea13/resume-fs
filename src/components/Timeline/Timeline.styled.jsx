@@ -4,6 +4,7 @@ import { TimelineItem } from "@mui/lab";
 import { TimelineDot } from "@mui/lab";
 import { TimelineConnector } from "@mui/lab";
 import { TimelineContent } from "@mui/lab";
+import { Typography } from "@mui/material";
 
 export const StyledSeparator = styled(TimelineSeparator)`
   span {
@@ -57,5 +58,5 @@ export const StyledCustomSeparatorConnector = styled(TimelineConnector)`
 `;
 
 export const StyledTimelineTypography = styled(TimelineContent)`
-  padding: 0px;
+  // padding: 0px;
 `;

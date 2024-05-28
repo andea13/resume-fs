@@ -16,6 +16,9 @@ export const HeaderStyled = styled(AppBar)`
   @media (max-width: 600px) {
     padding: 0;
   }
+  @media (min-width: 900px) {
+    margin-bottom: 30px;
+  }
 `;
 
 export const HeaderContainerStyled = styled(Container)`

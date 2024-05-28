@@ -67,7 +67,7 @@ const Header = ({ title, text, link }) => {
               }
             }
           >
-            <StyledNavLink index to="/">
+            <StyledNavLink to="/">
               {" "}
               <HomeIconStyled />
             </StyledNavLink>
