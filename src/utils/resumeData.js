@@ -66,6 +66,34 @@ const resumeData = {
         "I graduated from high school with honors. I studied various subjects, including mathematics, physics, and computer science.",
     },
   ],
+  skills: {
+    technical: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "SQL",
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Photoshop",
+    ],
+    personal: [
+      "Problem-solving",
+      "Teamwork",
+      "Communication",
+      "Time management",
+      "Creativity",
+      "Adaptability",
+      "Attention to detail",
+      "Organization",
+      "Leadership",
+      "Critical thinking",
+    ],
+  },
 };
 
 export default resumeData;

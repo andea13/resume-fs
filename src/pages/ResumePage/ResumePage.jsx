@@ -3,15 +3,15 @@ import { nanoid } from "nanoid";
 import CustomTimeline, {
   CustomTimelineSeparator,
 } from "../../components/Timeline/Timeline.jsx";
+import AboutMe from "../../components/AboutMe/AboutMe.jsx";
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import resumeData from "../../utils/resumeData.js";
 
 import {
+  StyledItemTitle,
   StyledResumePage,
   StyledResumePageContainer,
-  StyledAboutItem,
-  StyledItemTitle,
   StyledWorkExperienceItem,
   StyledEducationExperienceItem,
   StyledResumeTimelineContent,
@@ -29,10 +29,7 @@ const ResumePage = () => {
     <StyledResumePage xs={12} md={12}>
       {/* about me */}
       <StyledResumePageContainer container>
-        <StyledAboutItem item>
-          <StyledItemTitle>About me</StyledItemTitle>
-          <p>{resumeData.about}</p>
-        </StyledAboutItem>
+        <AboutMe />
       </StyledResumePageContainer>
 
       {/* education and experiences */}

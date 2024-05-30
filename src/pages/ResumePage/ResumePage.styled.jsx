@@ -7,7 +7,7 @@ import { Grid } from "@mui/material";
 export const StyledResumePage = styled.div`
   border-radius: 6px;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px -3px 3px rgba(0, 0, 0, 0.3);
   @media (min-width: 900px) {
     display: flex;
     flex-direction: column;
@@ -15,12 +15,17 @@ export const StyledResumePage = styled.div`
     align-items: center;
   }
 `;
-export const StyledAboutItem = styled(Grid)`
+
+export const StyledResumePageContainer = styled(Grid)`
+&.MuiGrid-container {
+background-color: green,
+box-shadow: 1px -3px 3px rgba(0, 0, 0, 0.3);
+`;
+
+export const StyledWorkExperienceItem = styled(Grid)`
   &.MuiGrid-item {
     display: flex;
     align-items: flex-start;
-    flex-direction: column;
-    margin-bottom: 10px;
   }
 `;
 
@@ -29,23 +34,6 @@ export const StyledItemTitle = styled.h1`
   font-size: 20px;
   font-weight: 700;
   text-align: left;
-`;
-
-export const StyledAboutItemDescription = styled.p`
-  margin-bottom: 10px;
-`;
-
-export const StyledResumePageContainer = styled(Grid)`
-&.MuiGrid-container {
-background-color: green,
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
-`;
-
-export const StyledWorkExperienceItem = styled(Grid)`
-  &.MuiGrid-item {
-    display: flex;
-    align-items: flex-start;
-  }
 `;
 
 export const StyledEducationExperienceItem = styled(Grid)`
