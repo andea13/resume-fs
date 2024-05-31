@@ -18,7 +18,17 @@ export const StyledButton = styled(Button)`
 
   margin: 20px 0;
   &:hover {
-    background-color: #ffcb00;
+    background-color: #eeeeee;
+  }
+  &.filterButton {
+    border-radius: 4px;
+    background-color: #eee;
+    &:hover {
+      background-color: #ffc500;
+    }
+    &:active {
+      background-color: #ffc500;
+    }
   }
 `;
 

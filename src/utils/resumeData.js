@@ -3,6 +3,8 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
+import project1 from "../assets/images/projectImg.jpg";
+
 const resumeData = {
   name: "Oksana Dziuba",
   title: "Full Stack Developer",
@@ -94,6 +96,38 @@ const resumeData = {
       "Critical thinking",
     ],
   },
+
+  projectFilters: ["HTML/CSS", "JavaScript", "React", "Node.js", "All"],
+  projects: [
+    {
+      img: project1,
+      title: "Portfolio Website",
+      alt: "Portfolio Website",
+      date: "2021",
+      description:
+        "I created a portfolio website to showcase my work and skills. The website is built using React, Node.js, and MongoDB.",
+      link: "../assets//images/photo-1572177812156-58036aae439c (1).avif",
+      tags: ["React", "Node.js", "MongoDB"],
+    },
+    {
+      img: "../assets/images/projectImg.jpg",
+      title: "E-commerce Website",
+      date: "2020",
+      description:
+        "I developed an e-commerce website for a client. The website is built using HTML, CSS, JavaScript, and PHP.",
+      link: "../assets//images/photo-1572177812156-58036aae439c (1).avif",
+      tags: ["HTML/CSS", "JavaScript", "PHP"],
+    },
+    {
+      img: "../assets/images/projectImg.jpg",
+      title: "Blog Website",
+      date: "2019",
+      description:
+        "I created a blog website for a client. The website is built using WordPress.",
+      link: "../assets//images/photo-1572177812156-58036aae439c (1).avif",
+      tags: ["WordPress"],
+    },
+  ],
 };
 
 export default resumeData;

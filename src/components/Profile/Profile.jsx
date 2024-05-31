@@ -5,7 +5,7 @@ import CustomTimeline, { CustomTimelineSeparator } from "../Timeline/Timeline";
 import TimelineContent from "@mui/lab/TimelineContent";
 
 import GetAppIcon from "@mui/icons-material/GetApp";
-import profileImage from "../../assets/images/resume.JPG";
+import profileImage from "../../assets/images/photo_2024-05-31_13-22-24.jpg";
 import resumeData from "../../utils/resumeData";
 
 import {
