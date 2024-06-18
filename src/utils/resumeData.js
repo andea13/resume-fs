@@ -3,7 +3,10 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
-import project1 from "../assets/images/projectImg.jpg";
+import webstudio from "../assets/images/webstudioScreen.png";
+import searchline from "../assets/images/searchline.jpg";
+import hotel from "../assets/images/hotelPage.png";
+import watertracker from "../assets/images/watertracker.png";
 
 const resumeData = {
   name: "Oksana Dziuba",
@@ -100,31 +103,40 @@ const resumeData = {
   projectFilters: ["HTML/CSS", "JavaScript", "React", "Node.js", "All"],
   projects: [
     {
-      img: project1,
-      title: "Portfolio Website",
+      img: webstudio,
+      title: "Webstudio",
       alt: "Portfolio Website",
       date: "2021",
       description:
         "I created a portfolio website to showcase my work and skills. The website is built using React, Node.js, and MongoDB.",
-      link: "../assets//images/photo-1572177812156-58036aae439c (1).avif",
+      link: "https://andea13.github.io/goit-markup-hw-08/",
       tags: ["React", "Node.js", "MongoDB"],
     },
     {
-      img: "../assets/images/projectImg.jpg",
-      title: "E-commerce Website",
-      date: "2020",
+      img: searchline,
+      title: "Image Search Bar",
+      date: "2023",
       description:
         "I developed an e-commerce website for a client. The website is built using HTML, CSS, JavaScript, and PHP.",
-      link: "../assets//images/photo-1572177812156-58036aae439c (1).avif",
+      link: "https://andea13.github.io/goit-js-hw-11/",
       tags: ["HTML/CSS", "JavaScript", "PHP"],
     },
     {
-      img: "../assets/images/projectImg.jpg",
-      title: "Blog Website",
-      date: "2019",
-      description:
-        "I created a blog website for a client. The website is built using WordPress.",
-      link: "../assets//images/photo-1572177812156-58036aae439c (1).avif",
+      img: hotel,
+      title: "Mimino",
+      date: "2023",
+      description: "Hotel Booking Website",
+      link: "https://starik061.github.io/chicki-picki-project/",
+      tags: ["WordPress"],
+    },
+    {
+      img: watertracker,
+      title: "Water Tracker",
+      date: "2023",
+      description: "Hotel Booking Website",
+      link: "https://andriipolishchuk28.github.io/water-tracker-frontend/",
+      linkBackend:
+        "https://github.com/SerhiiOberemchuk/watertracker-backand-codekartel",
       tags: ["WordPress"],
     },
   ],

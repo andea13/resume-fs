@@ -6,9 +6,9 @@ export const StyledPortfolioListContainer = styled.div`
 
 export const StyledPortfolioList = styled.ul`
   display: block;
-  margin-bottom: 60px;
+  // margin-bottom: 60px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -18,28 +18,32 @@ export const StyledPortfolioList = styled.ul`
 `;
 
 export const StyledPortfolioListItem = styled.li`
+  display: block;
   list-style: none;
-  max-width: 450px;
+  // max-width: 450px;
   width: 100%;
   height: 404px;
-  height: 100%;
-  margin-bottom: 30px;
+  // height: 100%;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border-radius: 10px;
 
   &:last-child {
     margin-bottom: 0;
-
-    @media (min-width: 768px) {
-      display: flex;
-      flex-direction: column;
-    }
   }
 
-  @media (min-width: 768px) {
-    max-width: 354px;
+  @media (min-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    max-width: 324px;
     width: 100%;
     height: 440px;
-    margin-bottom: 0;
-    flex-basis: calc((100% - 30px) / 2);
+    margin-bottom: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    flex-basis: calc((100% - 20px) / 2);
   }
 
   @media (min-width: 1200px) {
@@ -64,10 +68,22 @@ export const StyledPortfolioListLink = styled.a`
 `;
 
 export const StyledPortfolioListThumb = styled.div`
-  max-width: 450px;
+  max-width: 670px;
   width: 100%;
   position: relative;
   overflow: hidden;
+
+  @media (min-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+
+    height: 440px;
+    margin-bottom: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    flex-basis: calc((100% - 20px) / 2);
+  }
 `;
 
 export const StyledPortfolioListImage = styled.img`
@@ -83,7 +99,8 @@ export const StyledPortfolioListOverlay = styled.p`
   position: absolute;
   bottom: 0;
   left: 0;
-  max-width: 450px;
+
+  // max-width: 450px;
   width: 100%;
   max-height: 294px;
   height: 100%;
@@ -93,29 +110,15 @@ export const StyledPortfolioListOverlay = styled.p`
   padding-right: 24px;
   padding-bottom: 77px;
   padding-left: 24px;
+  border-radius: 0 0 10px 0px;
 
   text-align: left;
   line-height: 1.6;
   color: var(--primary-button-color);
-  background-color: rgba(33, 150, 243, 0.9);
+  // background-color: rgba(255, 197, 0, 0.75);
+  background-color: rgba(61, 133, 198);
   transform: translateY(100%);
   transition: transform var(--transition-time-main) var(--time-function);
-
-  @media (max-width: 479px) {
-    width: 100%;
-    height: auto;
-    padding: 77px 24px;
-  }
-
-  @media (min-width: 768px) {
-    width: 100%;
-    height: 100%;
-  }
-
-  @media (min-width: 1200px) {
-    width: 100%;
-    height: 100%;
-  }
 
   a:hover &,
   a:focus & {

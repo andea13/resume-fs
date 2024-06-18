@@ -18,7 +18,7 @@ const PortfolioList = ({ resumeData }) => {
       <StyledPortfolioList>
         {resumeData.projects.map((project) => (
           <StyledPortfolioListItem key={nanoid()}>
-            <StyledPortfolioListLink href="">
+            <StyledPortfolioListLink href={project.link}>
               <StyledPortfolioListThumb>
                 {/* <source
                     srcset="
@@ -41,7 +41,7 @@ const PortfolioList = ({ resumeData }) => {
                       "
                     media="(max-width: 767px)"
                   /> */}
-                <img src={project.img} alt="Test2" />
+                <img src={project.img} alt={project.description} />
                 <StyledPortfolioListOverlay>
                   {project.description}
                 </StyledPortfolioListOverlay>
@@ -50,12 +50,11 @@ const PortfolioList = ({ resumeData }) => {
                 <StyledPortfolioListItemTitle>
                   {project.title}
                 </StyledPortfolioListItemTitle>
-                <p>Веб-сайт</p>
+                {/* <p></p> */}
               </StyledPortfolioListItemCard>
             </StyledPortfolioListLink>
           </StyledPortfolioListItem>
         ))}
-        ;
       </StyledPortfolioList>
     </StyledPortfolioListContainer>
   );

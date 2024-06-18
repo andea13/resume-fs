@@ -12,10 +12,10 @@ const PortfolioPage = () => {
   return (
     <StyledPortfolioPage>
       <StyledPortfolioPageContainer container>
-        <Grid item xs={12} md={12}>
+        <Grid item xs={12} sm={12} md={12}>
           <PortfolioFilter resumeData={resumeData} />
         </Grid>
-        <Grid item xs={12} md={12}>
+        <Grid item xs={12} sm={12} md={12}>
           <PortfolioList resumeData={resumeData} />
         </Grid>
       </StyledPortfolioPageContainer>
