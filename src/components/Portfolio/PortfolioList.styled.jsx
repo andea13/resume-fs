@@ -22,11 +22,12 @@ export const StyledPortfolioListItem = styled.li`
   list-style: none;
   // max-width: 450px;
   width: 100%;
-  height: 404px;
-  // height: 100%;
+  // height: 404px;
+  height: 100%;
   margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 10px;
 
   border-radius: 10px;
 
@@ -37,12 +38,11 @@ export const StyledPortfolioListItem = styled.li`
   @media (min-width: 900px) {
     display: flex;
     flex-direction: column;
-    max-width: 324px;
+    max-width: 265px;
     width: 100%;
-    height: 440px;
+    // height: 440px;
     margin-bottom: 30px;
-    margin-left: 0;
-    margin-right: 0;
+
     flex-basis: calc((100% - 20px) / 2);
   }
 
@@ -73,7 +73,7 @@ export const StyledPortfolioListThumb = styled.div`
   position: relative;
   overflow: hidden;
 
-  @media (min-width: 900px) {
+  @media (min-width: 768px) {
     display: flex;
     flex-direction: column;
     max-width: 450px;

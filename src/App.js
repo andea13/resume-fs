@@ -40,19 +40,17 @@ function App() {
           <GridFirstItemStyled item xs={12} sm={12} md={4}>
             <Profile />
           </GridFirstItemStyled>
-          <GridSecondItemStyled item xs={12} sm={12} md={8}>
+          <GridSecondItemStyled item xs={10} sm={12} md={12}>
             <Header style={{ marginBottom: "30px" }} />
-            <Grid container direction="column">
+            <Grid container direction="column" style={{ width: "100%" }}>
               <Grid item>
-                <div>
-                  <Suspense>
-                    <Routes>
-                      <Route path="/" element={<HomePage />} />
-                      <Route path="/resume" element={<ResumePage />} />
-                      <Route path="/portfolio" element={<PortfolioPage />} />
-                    </Routes>
-                  </Suspense>
-                </div>
+                <Suspense>
+                  <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/resume" element={<ResumePage />} />
+                    <Route path="/portfolio" element={<PortfolioPage />} />
+                  </Routes>
+                </Suspense>
               </Grid>
               <Grid item>
                 <Footer />

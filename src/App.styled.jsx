@@ -56,6 +56,7 @@ export const GridSecondItemStyled = styled(Grid)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   padding: "0",
+  boxSizing: "border-box",
 
   justifyContent: "flex-start",
   alignItems: "center",
